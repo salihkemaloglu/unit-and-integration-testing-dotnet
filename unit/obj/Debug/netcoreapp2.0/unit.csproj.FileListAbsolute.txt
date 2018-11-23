@@ -1,0 +1,17 @@
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\unit.deps.json
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\unit.runtimeconfig.json
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\unit.runtimeconfig.dev.json
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\unit.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\unit.pdb
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\webapi.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\bin\Debug\netcoreapp2.0\webapi.pdb
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.csprojAssemblyReference.cache
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.csproj.CoreCompileInputs.cache
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.AssemblyInfoInputs.cache
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.AssemblyInfo.cs
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.csproj.CopyComplete
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.dll
+C:\Users\LA\Desktop\Testarea\C#\src\unit\obj\Debug\netcoreapp2.0\unit.pdb
