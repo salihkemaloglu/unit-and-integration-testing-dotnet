@@ -5412,12 +5412,28 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.All": "2.0.9",
+          "MongoDB.Bson": "2.7.2",
+          "MongoDB.Driver": "2.7.2"
+        },
+        "compile": {
+          "bin/placeholder/data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/data.dll": {}
+        }
+      },
       "webapi/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.9",
-          "Microsoft.NETCore.App": "2.0.0"
+          "Microsoft.NETCore.App": "2.0.0",
+          "data": "1.0.0"
         },
         "compile": {
           "bin/placeholder/webapi.dll": {}
@@ -14156,6 +14172,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "data/1.0.0": {
+      "type": "project",
+      "path": "../data/data.csproj",
+      "msbuildProject": "../data/data.csproj"
+    },
     "webapi/1.0.0": {
       "type": "project",
       "path": "../webapi/webapi.csproj",
@@ -14166,8 +14187,7 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NET.Test.Sdk >= 15.7.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MongoDB.Bson >= 2.7.2",
-      "MongoDB.Driver >= 2.7.2",
+      "data >= 1.0.0",
       "webapi >= 1.0.0",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
@@ -14203,6 +14223,9 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj": {
+              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj"
+            },
             "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj": {
               "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj"
             }
@@ -14226,14 +14249,6 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "MongoDB.Bson": {
-            "target": "Package",
-            "version": "[2.7.2, )"
-          },
-          "MongoDB.Driver": {
-            "target": "Package",
-            "version": "[2.7.2, )"
           },
           "xunit": {
             "target": "Package",

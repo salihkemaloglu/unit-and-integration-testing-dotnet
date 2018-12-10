@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using data;
+using data.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace webapi.Controllers
@@ -13,6 +15,8 @@ namespace webapi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            //var context = new DBContext();
+            //context.Insert(new UnitTestModel { Status = true });
             return new string[] { "value1", "value2" };
         }
 

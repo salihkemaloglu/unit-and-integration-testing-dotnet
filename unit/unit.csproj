@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -8,16 +8,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
-    <PackageReference Include="MongoDB.Bson" Version="2.7.2" />
-    <PackageReference Include="MongoDB.Driver" Version="2.7.2" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
+
     <ProjectReference Include="..\webapi\webapi.csproj" /> 
-    <!-- <ProjectReference Include="\app\dotnetapp\webapi.csproj" /> for docker -->
+    <ProjectReference Include="..\data\data.csproj" />
+    <!-- <ProjectReference Include="\app\data\data.csproj" /> 
+    <ProjectReference Include="\app\dotnetapp\webapi.csproj" />  -->
   </ItemGroup>
 
 </Project>

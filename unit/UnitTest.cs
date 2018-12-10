@@ -1,62 +1,34 @@
-using System;
-using System.IO;
-using System.Linq;
-using System.Xml.Serialization;
-using webapi.Controllers;
+using data;
+using System.Threading.Tasks;
+using webapi.Todo;
 using Xunit;
 
 namespace unitTest
 {
     public class UnitTest
     {
+        DBContext context = new DBContext();
         [Fact]
-        public void Test()
+        public async Task CanBeCancelledBy_UserIsAdmin_ReturnsTrueAsync()
         {
-            var controller = new ValuesController();
-            var result = controller.Get();
-            Assert.Equal(2, result.Count());
-        }
-        [Fact]
-        public void Test1()
-        {
-            var controller = new ValuesController();
+            var reservation = new Reservation();
+            var result = reservation.CanBeCancelledBy(new User { IsAdmin = true });
+            await context.Insert(new data.Model.UnitTestModel { Status = result });
+            Assert.True(result);
 
-            var result2 = controller.Get(1);
-            Assert.Equal("value", result2.ToString());
         }
 
-        [Fact]
-        public void Test2()
+        [Theory]
+        [InlineData(1, 1, 1)]
+        [InlineData(1, 2, 2)]
+        [InlineData(2, 3, 6)]
+        public void MultiplyNumbers_ResultIsCorrect_ReturnsMultiplyNumbers(float number1, float number2, float multiplication)
         {
-            var controller = new ValuesController();
-
-            var result2 = controller.Get(1);
-            Assert.Equal("value", result2.ToString());
+            var multi=new Multiply();
+            float testMultiplication = multi.MultiplyNumbers(number1,number2);
+            Assert.Equal(multiplication, testMultiplication);
         }
-        [Fact]
-        public void Test3()
-        {
-            var controller = new ValuesController();
-
-            var result2 = controller.Get(1);
-            Assert.Equal("value", result2.ToString());
-        }
-        [Fact]
-        public void Test4()
-        {
-            var controller = new ValuesController();
-
-            var result2 = controller.Get(1);
-            Assert.Equal("value", result2.ToString());
-        }
-        [Fact]
-        public void Test5()
-        {
-            var controller = new ValuesController();
-
-            var result2 = controller.Get(1);
-            Assert.Equal("value", result2.ToString());
-        }
-
     }
+
+
 }

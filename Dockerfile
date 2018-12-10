@@ -3,12 +3,14 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 COPY webapi/*.csproj ./dotnetapp/
+COPY data/*.csproj ./data/
 WORKDIR /app/dotnetapp
 RUN dotnet restore
 
 # copy and publish app and libraries
 WORKDIR /app/
 COPY webapi/. ./dotnetapp/
+COPY data/. ./data/
 WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release -o out
 
