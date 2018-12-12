@@ -2,13 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{F90B5D38-1939-4B25-BF88-C55AED7E124A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webapi", "webapi\Webapi.csproj", "{F90B5D38-1939-4B25-BF88-C55AED7E124A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit", "unit\unit.csproj", "{CC8CEDAA-88BD-4A7B-BBB3-5E91C07639E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit", "unit\Unit.csproj", "{CC8CEDAA-88BD-4A7B-BBB3-5E91C07639E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gate", "gate\gate.csproj", "{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data", "data\data.csproj", "{1A820E2A-6339-46CB-AEAA-265AD0E21847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "data\Data.csproj", "{1A820E2A-6339-46CB-AEAA-265AD0E21847}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,18 +42,6 @@ Global
 		{CC8CEDAA-88BD-4A7B-BBB3-5E91C07639E5}.Release|x64.Build.0 = Release|Any CPU
 		{CC8CEDAA-88BD-4A7B-BBB3-5E91C07639E5}.Release|x86.ActiveCfg = Release|Any CPU
 		{CC8CEDAA-88BD-4A7B-BBB3-5E91C07639E5}.Release|x86.Build.0 = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|x64.Build.0 = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Debug|x86.Build.0 = Debug|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|x64.ActiveCfg = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|x64.Build.0 = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|x86.ActiveCfg = Release|Any CPU
-		{1A61198C-FA7B-4A54-9137-3AF0F81CC10C}.Release|x86.Build.0 = Release|Any CPU
 		{1A820E2A-6339-46CB-AEAA-265AD0E21847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A820E2A-6339-46CB-AEAA-265AD0E21847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A820E2A-6339-46CB-AEAA-265AD0E21847}.Debug|x64.ActiveCfg = Debug|Any CPU

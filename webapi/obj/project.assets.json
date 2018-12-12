@@ -5006,7 +5006,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "data/1.0.0": {
+      "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -5015,10 +5015,10 @@
           "MongoDB.Driver": "2.7.2"
         },
         "compile": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/Data.dll": {}
         }
       }
     }
@@ -13259,17 +13259,17 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "data/1.0.0": {
+    "Data/1.0.0": {
       "type": "project",
-      "path": "../data/data.csproj",
-      "msbuildProject": "../data/data.csproj"
+      "path": "../data/Data.csproj",
+      "msbuildProject": "../data/Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Data >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.9",
-      "Microsoft.NETCore.App >= 2.0.0",
-      "data >= 1.0.0"
+      "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -13279,9 +13279,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj",
-      "projectName": "webapi",
-      "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj",
+      "projectUniqueName": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\Webapi.csproj",
+      "projectName": "Webapi",
+      "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\Webapi.csproj",
       "packagesPath": "C:\\Users\\LA\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\obj\\",
       "projectStyle": "PackageReference",
@@ -13302,8 +13302,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj": {
-              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj"
+            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\Data.csproj": {
+              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\Data.csproj"
             }
           }
         }

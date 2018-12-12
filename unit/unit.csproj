@@ -13,12 +13,11 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
-  <ItemGroup>
-
-    <ProjectReference Include="..\webapi\webapi.csproj" /> 
-    <ProjectReference Include="..\data\data.csproj" />
-    <!-- <ProjectReference Include="\app\data\data.csproj" /> 
-    <ProjectReference Include="\app\dotnetapp\webapi.csproj" />  -->
+  <ItemGroup> 
+    <ProjectReference Include="..\data\Data.csproj" /> 
+    <ProjectReference Include="..\webapi\Webapi.csproj" />
+    <!-- <ProjectReference Include="\app\data\Data.csproj" /> 
+    <ProjectReference Include="\app\dotnetapp\Webapi.csproj" />  -->
   </ItemGroup>
 
 </Project>

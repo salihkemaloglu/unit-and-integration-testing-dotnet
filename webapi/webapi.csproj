@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\data\data.csproj" />
-    <!-- <ProjectReference Include="\app\data\data.csproj" />  -->
+    <ProjectReference Include="..\data\Data.csproj" />
+    <!-- <ProjectReference Include="\app\data\Data.csproj" /> -->
   </ItemGroup>
 
 </Project>

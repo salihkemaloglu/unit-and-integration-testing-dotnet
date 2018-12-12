@@ -5412,7 +5412,7 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "data/1.0.0": {
+      "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -5421,25 +5421,25 @@
           "MongoDB.Driver": "2.7.2"
         },
         "compile": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/Data.dll": {}
         }
       },
-      "webapi/1.0.0": {
+      "Webapi/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Data": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.9",
-          "Microsoft.NETCore.App": "2.0.0",
-          "data": "1.0.0"
+          "Microsoft.NETCore.App": "2.0.0"
         },
         "compile": {
-          "bin/placeholder/webapi.dll": {}
+          "bin/placeholder/Webapi.dll": {}
         },
         "runtime": {
-          "bin/placeholder/webapi.dll": {}
+          "bin/placeholder/Webapi.dll": {}
         }
       }
     }
@@ -14172,23 +14172,23 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "data/1.0.0": {
+    "Data/1.0.0": {
       "type": "project",
-      "path": "../data/data.csproj",
-      "msbuildProject": "../data/data.csproj"
+      "path": "../data/Data.csproj",
+      "msbuildProject": "../data/Data.csproj"
     },
-    "webapi/1.0.0": {
+    "Webapi/1.0.0": {
       "type": "project",
-      "path": "../webapi/webapi.csproj",
-      "msbuildProject": "../webapi/webapi.csproj"
+      "path": "../webapi/Webapi.csproj",
+      "msbuildProject": "../webapi/Webapi.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Data >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.7.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "data >= 1.0.0",
-      "webapi >= 1.0.0",
+      "Webapi >= 1.0.0",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -14223,11 +14223,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj": {
-              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\data.csproj"
+            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\Data.csproj": {
+              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\data\\Data.csproj"
             },
-            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj": {
-              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\webapi.csproj"
+            "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\Webapi.csproj": {
+              "projectPath": "C:\\Users\\LA\\Desktop\\Testarea\\C#\\src\\webapi\\Webapi.csproj"
             }
           }
         }
@@ -14246,6 +14246,7 @@
             "version": "[15.7.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true

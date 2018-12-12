@@ -1,34 +1,60 @@
-using data;
-using System.Threading.Tasks;
-using webapi.Todo;
+using Data;
+using System.Linq;
+using Webapi.Todo;
 using Xunit;
 
-namespace unitTest
+namespace UnitTest
 {
     public class UnitTest
     {
-        DBContext context = new DBContext();
+        private readonly DBContext context = new DBContext();
+
+        public UnitTest()
+        {
+            var item = new InsertStaticItems();
+        }
+
         [Fact]
-        public async Task CanBeCancelledBy_UserIsAdmin_ReturnsTrueAsync()
+        public void CanBeCancelledBy_UserIsAdmin_ReturnsTrue()
         {
             var reservation = new Reservation();
             var result = reservation.CanBeCancelledBy(new User { IsAdmin = true });
-            await context.Insert(new data.Model.UnitTestModel { Status = result });
             Assert.True(result);
-
         }
-
-        [Theory]
-        [InlineData(1, 1, 1)]
-        [InlineData(1, 2, 2)]
-        [InlineData(2, 3, 6)]
-        public void MultiplyNumbers_ResultIsCorrect_ReturnsMultiplyNumbers(float number1, float number2, float multiplication)
+        [Fact]
+        public void GetAllItem_IsItemCountSix_ReturnsSix()
         {
-            var multi=new Multiply();
-            float testMultiplication = multi.MultiplyNumbers(number1,number2);
-            Assert.Equal(multiplication, testMultiplication);
+            var result = context.GetAll().Count();
+            Assert.Equal(5, result);
+
         }
+        [Fact]
+        public void GetFirstItem_ItemIsFirst_ReturnsAli()
+        {
+            var result = context.GetAll().FirstOrDefault();
+            Assert.Equal("Ali", result.Name);
+
+        }
+        [Fact]
+        public void DeleteOneItem_DeleteIsSuccess_ReturnsFive()
+        {
+            context.Delete(context.GetAll().FirstOrDefault().Id);
+            Assert.Equal(5, context.GetAll().Count());
+
+        }
+        [Fact]
+        public void UpdateOneItem_UpdateIsSuccess_ReturnsUpdateMan()
+        {
+            var item = context.GetAll().LastOrDefault();
+            context.Update(item);
+            var result = context.GetById(item.Id);
+            Assert.Equal("Update", result.FavoutireHero);
+
+        }
+
     }
 
-
 }
+
+
+

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace data.Model
+namespace Data.Model
 {
     public class UnitTestModel
     {

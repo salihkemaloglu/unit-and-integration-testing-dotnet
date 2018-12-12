@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using data;
-using data.Model;
+using Data;
+using Data.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace webapi.Controllers
+namespace Webapi.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
