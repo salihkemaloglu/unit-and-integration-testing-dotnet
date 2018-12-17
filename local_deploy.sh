@@ -1,10 +1,12 @@
 
 #!/bin/bash
-echo "Building webapi project"
+echo "Building webapi project..."
 docker build -t webapi .
-echo "Building test project"
-docker build --target testrunner -t webapitest .
+echo "Building unit test project..."
+docker build --target unittest -t webapiunit .
 
+echo "Building integration test project..."
+docker build --target integrationtest -t webapiintegration .
 
-echo "Unit test is starting"
+echo "Unit test is starting..."
 docker-compose up

@@ -5,44 +5,50 @@ using System.Threading.Tasks;
 using Data;
 using Data.Model;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using Newtonsoft.Json;
+using Webapi.Todo;
 
 namespace Webapi.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        readonly CroudOperations operation = new CroudOperations();
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public JsonResult Get()
         {
-            //var context = new DBContext();
-            //context.Insert(new UnitTestModel { Status = true });
-            return new string[] { "value1", "value2" };
+            return Json(operation.GetAll());
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public JsonResult Get(ObjectId id)
         {
-            return "value";
+            return Json(operation.GetById(id));
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]UnitTestModel model)
         {
+            operation.Insert(model);
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        // PUT api/values/
+        [HttpPut]
+        public void Put([FromBody]UnitTestModel model)
         {
+            operation.Update(model);
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        // DELETE api/values
+        [HttpDelete]
+        public void Delete([FromBody]UnitTestModel model)
         {
+            operation.Delete(model.Id);
         }
     }
 }

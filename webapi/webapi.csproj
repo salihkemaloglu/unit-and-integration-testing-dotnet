@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\data\Data.csproj" />
-    <!-- <ProjectReference Include="\app\data\Data.csproj" /> -->
+    <!-- <ProjectReference Include="..\data\Data.csproj" /> -->
+    <ProjectReference Include="\app\data\Data.csproj" />
   </ItemGroup>
 
 </Project>

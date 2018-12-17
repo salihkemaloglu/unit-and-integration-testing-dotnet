@@ -15,10 +15,15 @@ WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release -o out
 
 
-# test application -- see: dotnet-docker-unit-testing.md
-FROM build AS testrunner
+# test applications
+FROM build AS unittest
 WORKDIR /app/tests
 COPY unit/. .
+ENTRYPOINT ["dotnet", "test", "--logger:trx"]
+
+FROM build AS integrationtest
+WORKDIR /app/itests
+COPY Integration/. .
 ENTRYPOINT ["dotnet", "test", "--logger:trx"]
 
 FROM  microsoft/dotnet:latest

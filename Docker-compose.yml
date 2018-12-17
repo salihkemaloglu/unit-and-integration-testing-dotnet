@@ -1,12 +1,16 @@
 version: '2.2'
 services:
   api:
-    container_name: test
-    image: webapitest
-    ports:
-      - 8080:8080
+    container_name: api
+    image: webapi
     depends_on:
       - 'mongo'
+  unit:
+    container_name: unittest
+    image: webapiunit
+  integration:
+    container_name: integrationtest
+    image: webapiintegration  
   mongo:
     image: mongo:latest
     container_name: mongo

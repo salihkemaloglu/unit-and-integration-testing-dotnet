@@ -10,7 +10,7 @@ namespace Data
     public class DBContext
     {
 
-        internal DBConnection _repo = new DBConnection("mongodb://localhost:27017", "UnitTest");
+        internal DBConnection _repo = new DBConnection("mongodb://mongo:27017", "UnitTest");
 
         private const string _collectionName = "UnitTestModel";
 
@@ -23,11 +23,11 @@ namespace Data
         }
 
 
-        public async Task Insert(UnitTestModel UnitTestModel)
+        public void Insert(UnitTestModel UnitTestModel)
         {
             try
             {
-                await Collection.InsertOneAsync(UnitTestModel);
+                Collection.InsertOne(UnitTestModel);
                 Console.WriteLine("Insert is  success:");
             }
             catch (Exception ex)
@@ -40,7 +40,7 @@ namespace Data
         {
             try
             {
-                 Collection.InsertMany(model);
+                Collection.InsertMany(model);
                 Console.WriteLine("Insert static item is success:");
             }
             catch (Exception ex)
@@ -50,11 +50,9 @@ namespace Data
         }
         public List<UnitTestModel> GetAll()
         {
-            //var sort = Builders<UnitTestModel>.Sort.Descending("_id");
             try
             {
-                var item = Collection.Find(new BsonDocument()).ToList();
-                return item;
+                return Collection.Find(new BsonDocument()).ToList();
             }
             catch (Exception ex)
             {
@@ -64,7 +62,7 @@ namespace Data
             }
 
         }
-        public UnitTestModel GetById(BsonObjectId id)
+        public UnitTestModel GetById(ObjectId id)
         {
             try
             {
@@ -77,7 +75,7 @@ namespace Data
             }
 
         }
-        public void Delete(BsonObjectId id)
+        public void Delete(ObjectId id)
         {
             try
             {
@@ -94,7 +92,7 @@ namespace Data
         {
             try
             {
-                Collection.ReplaceOne(doc=>doc.Id==model.Id, new UnitTestModel {Id=model.Id, Name = "UpdateName", Surname = "UpdateSurname", Address = "UpdateAdress", FavoutireHero = "UpdateMan", Status = false });
+                Collection.ReplaceOne(doc=>doc.Id==model.Id, model);
                 Console.WriteLine("Update item is success:");
             }
             catch (Exception ex)

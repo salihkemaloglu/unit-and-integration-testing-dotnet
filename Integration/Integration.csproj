@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -7,17 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
-  <ItemGroup> 
-    <!-- <ProjectReference Include="..\data\Data.csproj" /> 
-    <ProjectReference Include="..\webapi\Webapi.csproj" /> -->
-    <ProjectReference Include="\app\data\Data.csproj" /> 
+  <ItemGroup>
     <ProjectReference Include="\app\dotnetapp\Webapi.csproj" /> 
+    <!-- <ProjectReference Include="..\webapi\Webapi.csproj" /> -->
   </ItemGroup>
 
 </Project>
